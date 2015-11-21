@@ -3,11 +3,21 @@
             <title>bonbuvi's blog</title>
 
         </head>
+
         <body>
         <h1>Стих о ёжике</h1>
         <strong><p>Ёжик — зверёк из леса</p>
 <p>С виду вполне нормальный,</p>
 <p>Но если к нему приглядеться</p>
 <p>Есть у него аномалии.</p></strong>
+
+ {% for post in posts %}
+        <div>
+            <p>published: {{ post.published_date }}</p>
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaks }}</p>
+        </div>
+    {% endfor %}
+        
         </body>
 </html>
